@@ -14,7 +14,7 @@ const app = express();
 // Middleware
 app.use(express.json()); // Permite a Express leer el cuerpo de las peticiones en formato JSON
 const corsOptions = {
-  origin: 'https://tu-frontend-en-render.onrender.com', // Reemplaza con la URL que te dé Render para el frontend
+  origin: 'https://nan-aiweb-1.onrender.com', 
   optionsSuccessStatus: 200
 };
 app.use(cors()); // Habilita CORS para permitir peticiones desde React
