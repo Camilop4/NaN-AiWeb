@@ -51,7 +51,7 @@ function LoginPage() {
 
     try {
       // Nuestro backend solo espera username y password para el login
-      const response = await axios.post('http://localhost:5000/api/login', {
+      const response = await axios.post('https://nan-aiweb.onrender.com/api/login', {
         username: formData.username,
         password: formData.password
       });

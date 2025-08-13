@@ -26,7 +26,7 @@ const Dashboard = () => {
   // Función para obtener los productos del backend
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/products', {
+      const response = await axios.get('https://nan-aiweb.onrender.com/api/products', {
         headers: {
           'x-auth-token': token,
         },
@@ -65,12 +65,12 @@ const Dashboard = () => {
     try {
       if (editingProduct) {
         // Lógica para ACTUALIZAR un producto
-        await axios.put(`http://localhost:5000/api/products/${editingProduct._id}`, formData, {
+        await axios.put(`https://nan-aiweb.onrender.com/api/products/${editingProduct._id}`, formData, {
           headers: { 'x-auth-token': token },
         });
       } else {
         // Lógica para CREAR un producto
-        await axios.post('http://localhost:5000/api/products', formData, {
+        await axios.post('https://nan-aiweb.onrender.com/api/products', formData, {
           headers: { 'x-auth-token': token },
         });
       }
@@ -90,7 +90,7 @@ const Dashboard = () => {
   const handleDeleteProduct = async (id) => {
     if (window.confirm('¿Estás seguro de que quieres eliminar este producto?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/products/${id}`, {
+        await axios.delete(`https://nan-aiweb.onrender.com/api/products/${id}`, {
           headers: { 'x-auth-token': token },
         });
         fetchProducts(); // Recargar la lista de productos
