@@ -27,7 +27,7 @@ mongoose.connect(uri)
 
 // Ruta de prueba
 app.get('/', (req, res) => {
-  res.send('¡Backend de ventas funcionando!');
+  res.send('¡Backend de NaN-AiWeb funcionando!');
 });
 
 app.use('/api', authRoutes);
